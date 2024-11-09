@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+        .header, .section, .activities {
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            background-color: #f1c232;
+            color: #333;
+        }
+        .header h1, .header p {
+            margin: 10px 0;
+        }
+        .account {
+            background-color: #f1c232;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        .account img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .section {
+            background-color: #3b2d1f;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .menu-item {
+            width: 45%;
+            padding: 10px;
+            text-align: center;
+        }
+        .menu-item img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .menu-item p {
+            color: #fff;
+            font-size: 14px;
+        }
+        .activities {
+            background-color: #3b2d1f;
+        }
+        .activities-item {
+            width: 45%;
+            padding: 10px;
+            text-align: center;
+            margin: 10px auto;
+        }
+        .activities-item img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #d1a036;
+            padding: 10px 0;
+            cursor: pointer;
+            color:  #000;
+        }
+
+        .footer .nav-item {
+            text-align: center;
+            color: #000;
+        }
+        .footer a {
+            color: #000;
+        }
+
+        .footer .nav-item i {
+            font-size: 24px;
+            display: block;
+        }
+
+        .footer .nav-item span {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        @media (min-width: 768px) {
+            .menu-item, .activities-item {
+                width: 22%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>MULAI MENYEWAKAN</h1>
+    </div>
+
+    <div class="account">
+        <img src="images-removebg-preview.png" alt="Profile">
+        <div>
+            <h2>AKUN SAYA</h2>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Pesanan Saya</h3>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="pay.png" alt="Payment Icon">
+                <p>Pembayaran</p>
+            </div>
+            <div class="menu-item">
+                <a href="order.html"><img src="checkout.png" alt="Order Icon"></a>
+                <p>Pemesanan</p>
+            </div>
+            <div class="menu-item">
+                <img src="fast-delivery.png" alt="Shipping Icon">
+                <p>Dikirim</p>
+            </div>
+            <div class="menu-item">
+                <img src="review.png" alt="Rating Icon">
+                <p>Penilaian</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Format Penyewaan</h3>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="contract.png" alt="Format Icon">
+                <p>Format Penyewaan</p>
+            </div>
+            <div class="menu-item">
+                <img src="document.png" alt="Specification Icon">
+                <p>Spesifikasi Produk</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="activities">
+        <h3>Aktivitas Saya</h3>
+        <div class="menu">
+            <div class="activities-item">
+                <img src="multimedia.png" alt="Last Viewed Icon">
+                <p>Terakhir Dilihat</p>
+            </div>
+            <div class="activities-item">
+                <img src="heart.png" alt="Favorite Icon">
+                <p>Favorit Saya</p>
+            </div>
+            <div class="activities-item">
+                <img src="refresh.png" alt="Rent Again Icon">
+                <p>Sewa Lagi</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="nav-item">
+            <a href="index.html"><i>&#8962;</i></a>
+            <span>Beranda</span>
+        </div>
+        <div class="nav-item">
+            <a href="https://wa.me/6285262645595"><i>&#128172;</i></a>
+            <span>Chat</span>
+        </div>
+        <div class="nav-item">
+            <i>&#128722;</i>
+            <span>Pesanan</span>
+        </div>
+        <div class="nav-item">
+            <i>&#128276;</i>
+            <span>Notifikasi</span>
+        </div>
+        <div class="nav-item">
+            <a href="akun.html"><i>&#128100;</i></a>
+            <span>Akun</span>
+        </div>
+    </div>
+
+</body>
+</html>
