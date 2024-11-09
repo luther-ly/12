@@ -76,6 +76,7 @@
             color: #000;
         }
 
+
         .container {
             max-width: 500px;
             background-color: #FFD54F;
@@ -177,6 +178,16 @@
         }
 
         @media (max-width: 768px) {
+            .header h1 {
+                font-size: 7px;
+                margin-top: -6px;
+                margin-left: 2px;
+                position: relative;
+            }
+            .menu-icon {
+                position: relative;
+                transform: translateY(-6px);
+
             .item {
                 flex-direction: column;
                 text-align: center;
@@ -189,9 +200,11 @@
                 margin: 10px 0;
             }
         }
+    }
     </style>
 </head>
 <body>
+    
     
     <div class="header">
         <img src="logo.jpg" alt="">
