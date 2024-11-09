@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images.jpg');
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #fff;
+        }
+        .header {
+            background-color: #d1a036;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header img {
+            width: 50px;
+            border-radius: 50%;
+            float: left;
+        }
+
+        .header h1 {
+            float: left;
+            position:relative;
+            top: 13px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .header .menu-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #9c9a2f;
+            color: #333;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #ffff;
+            font-size: 16px;
+        }
+
+        .dropdown a:hover {
+            background-color: #d1a036;
+            color: #000;
+        }
+
+
+        .main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main h2 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #ffff;
+            position: relative;
+            top: 100px;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            top: 100px;
+        }
+
+        .search-box input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #d1a036;
+            padding: 10px 0;
+            cursor: pointer;
+            color:  #000;
+        }
+
+        .footer .nav-item {
+            text-align: center;
+            color: #000;
+        }
+        .footer a {
+            color: #000;
+        }
+
+        .footer .nav-item i {
+            font-size: 24px;
+            display: block;
+        }
+
+        .footer .nav-item span {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 7px;
+                margin-top: -6px;
+                margin-left: 2px;
+                position: relative;
+            }
+            .menu-icon {
+                position: relative;
+                transform: translateY(-6px);
+
+            }
+
+            .search-box input[type="text"] {
+                font-size: 10px;
+                position: relative;
+                left: 40px;
+                transform: translateY(-1130%);
+                width: 170px;
+                height: 20px;
+
+            }
+            .main h2 {
+                font-size: 20px;
+                position: relative;
+                bottom: 100px;
+            }
+
+            .footer .nav-item span {
+                font-size: 10px;
+            }
+            .header img {
+                width: 20px;
+                margin-left: -12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="logo.jpg" alt="">
+        <h1>STONER REALITY</h1>
+        <div class="menu-icon" onclick="toggleDropdown()">&#9776;</div>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="#">Home</a>
+            <a href="#">Katalog</a>
+            <a href="#">Tentang Kami</a>
+            <a href="#">Pusat Bantuan</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <h2>RENTAL ALAT BERAT <br> LENGKAP DAN BERKUALITAS</h2>
+        <div class="search-box">
+            <input type="text" placeholder="Cari Alat">
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="nav-item">
+            <a href="Dashboard.html"><i>&#8962;</i></a>
+            <span>Beranda</span>
+        </div>
+        <div class="nav-item">
+            <i>&#128172;</i>
+            <span>Chat</span>
+        </div>
+        <div class="nav-item">
+            <i>&#128722;</i>
+            <span>Pesanan</span>
+        </div>
+        <div class="nav-item">
+            <i>&#128276;</i>
+            <span>Notifikasi</span>
+        </div>
+        <div class="nav-item">
+            <i>&#128100;</i>
+            <span>Akun</span>
+        </div>
+    </div>
+    <script>
+        function toggleDropdown() {
+            const dropdownMenu = document.getElementById("dropdownMenu");
+            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+        }
+
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.menu-icon')) {
+                const dropdownMenu = document.getElementById("dropdownMenu");
+                if (dropdownMenu.style.display === "block") {
+                    dropdownMenu.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: #FAB12F;
+    width: auto;
+    height: 50px;
+    top: 0;
+    border: 1px solid;
+    z-index: 5;
+
+}
+nav img {
+    border-radius: 50%;
+    width: 40px;
+    margin-left: 30px;
+}
+.logo {
+    position: relative;
+    top: 7px;
+}
+nav p {
+    color: white;
+    margin-left: 100px;
+    margin-top: -37px;
+    position: relative;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+nav .navbut {
+    float: right;
+    outline: none;
+    position: relative;
+    top: -30px;
+    left: -100px;
+}
+nav button {
+    border: none;
+    background: none;
+    color: white;
+    outline: none;
+    margin-right: 20px;
+    position: relative;
+    bottom: -8px;
+}
+.navbut img {
+    border-radius: 50%;
+    width: 30px;
+    margin-right: 20px ;
+}
+.s-u {
+    float: right;
+}
+.imguser {
+    float: right;
+    right: 50px;
+}
+.imgshop {
+    float: right;
+    position: relative;
+    left: 30px;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    bottom: 2px;
+}
+.menu li a {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    z-index: 1;
+}
+.dropdown, .sub-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ffd966;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    min-width: 150px;
+}
+
+.menu > li:hover .dropdown,
+.dropdown li:hover .sub-dropdown {
+    display: block;
+}
+
+.dropdown li, .sub-dropdown li {
+    padding: 5px 0;
+}
+
+.dropdown li a, .sub-dropdown li a {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown li a:hover, .sub-dropdown li a:hover {
+    color: white;
+}
+.Home a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    right: 45px;
+    top: 8px;
+    font-size: 17px;
+    
+}
+li {
+    list-style-type: none;
+}
+body {
+    background-image: url('images.jpg');
+    background-position: center;
+}
+main {
+    height: 70%;
+    width: 100%;
+    position: fixed;
+    top:  130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main input {
+    width: 500px;
+    outline: none;
+    height: 40px;
+    border: none;
+    background-color:white;
+}
+
+main img {
+    width: 30px;
+    height: 30px;
+    border: none;
+    position: relative;
+    padding: 5px;
+    border-radius: 10px 0px 0px 10px;
+    background-color: white;
+}
+main button {
+    background-color: brown;
+    border: 1px solid;
+    position: relative;
+    right: 1px;
+    border-left: 3px solid;
+    border-color: rgb(92, 63, 11);
+    height: 43px;
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+    border-radius: 0px 10px 10px 0px;
+    cursor:pointer;
+
+}
+main button:active {
+    transform: scale(0.95);
+}
+.h1 {
+    bottom: -110px;
+    left: 320px;
+    font-size: 25px;
+    text-align: center;
+    display: grid;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    background-color: #b88328;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    position: fixed;
+    top: 70%;
+    display: block;
+    margin-top: 100px;
+    transform: translatey(10%);
+}
+footer > p {
+    color: white;
+    font-size: 20px;
+}
+footer img {
+    width: 100px;
+    transform: translateY(-30%);
+    margin: 0;
+    margin-left: 120px;
+}
+footer .genie {
+    position: relative;
+    right: 100px;
+    bottom: 26px;
+}
+footer .hitachi {
+    position: relative;
+    right: 100px;
+    top: 9px;
+}
+footer .kobel {
+    position: relative;
+    right: 100px;
+    bottom: 45px;
+}
+footer .kater {
+    position: relative;
+    right: 100px;
+    bottom: 24px;
+}
+footer .sakai {
+    position: relative;
+    right: 350px;
+    bottom: 5px;
+
+}
+.mesege {
+    position: relative;
+    right: 40px;
+    float: right;
+    bottom: 93px;
+    width: 80px;
+    font-size: 30px;
+    color: white;
+}
+.komat {
+    position: relative;
+    bottom: 55px;
+    left: 50px
+}
+.cs img {
+    width: 40px;
+    position: relative;
+    top: 270px;
+    right: 280px;
+    float: right;
+    border-radius: 50%;
+}
+.cs p {
+    background-color: white;
+    width: 80px;
+    padding: 12px;
+    float: right;
+    top: 280px;
+    right: 10px;
+    width: 190px;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 1px 50px 50px 50px;
+    position: relative;
+    text-align: center;
+
+}
+@media (max-width: 480px) {
+            .logo p {
+                font-size: 18px;
+            }
+
+            main input {
+                width: 100%;
+            }
+
+            main button {
+                width: 100%;
+            }
+
+            footer img {
+                width: 50px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="logo.jpg" alt=""><p>STONER REALITY</p></div>
+        <div class="navbut">
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="#">Katalog ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Sewa Alat Berat</a>
+                            <ul class="sub-dropdown">
+                                <li><a href="#">Excavator</a></li>
+                                <li><a href="#">Bulldozer</a></li>
+                                <li><a href="#">Wheel Loader</a></li>
+                                <li><a href="#">Wales Stump</a></li>
+                                <li><a href="#">Crane</a></li>
+                                <li><a href="#">Grader</a></li>
+                                <li><a href="#">Scraper</a></li>
+                                <li><a href="#">Asphalt Paver</a></li>
+                                <li><a href="#">Diesel Hammer</a></li>
+                                <li><a href="#">Roller</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Tentang Kami▼</a></li>
+                <li><a href="#">Pusat Bantuan▼</a></li>
+            <div class="s-u">
+                <a href=""><img src="shop-removebg-preview.png" alt=""></a>
+                <a href=""><img src="images-removebg-preview.png" alt=""></a>
+            </div>
+        </div>
+        </nav>
+    </nav>
+        
+        <div class="h1"><h1><Strong>RENTAL ALAT BERAT LENGKAP DAN BERKUALITAS</Strong></h1></div>
+    <main>
+        <img src="search.png" alt="icon">
+        <input type="search" placeholder="Cari Alat">
+        <button type="submit">Cari</button>
+    </main>
+    <footer>
+        <p>Merek andalah untuk setiap perkerjaan</p>
+        <img src="genie-logo.png" alt="" class="genie">
+        <img src="download-removebg-preview.png" class="hitachi">
+        <img src="kobelco-removebg-preview.png" alt="" class="kobel">
+        <img src="katerpillar-removebg-preview.png" alt="" class="kater">
+        <img src="komatsu-removebg.png" alt="" class="komat">
+        <img src="sakai-removebg-preview.png" alt="" class="sakai">
+        <i class="mesege">&#128172;</i>
+    </footer>
+    <div class="cs">
+        <img src="logo.jpg" alt="">
+        <p>ada yang bisa <br> kami bantu?</p>
+    </div>
+
+
+    <script src="home.js"></script>
+</body>
+</html>
