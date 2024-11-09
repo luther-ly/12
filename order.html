@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesanan Saya</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images.jpg');
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #fff;
+        }
+        .header {
+            background-color: #d1a036;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header img {
+            width: 50px;
+            border-radius: 50%;
+            float: left;
+        }
+
+        .header h1 {
+            float: left;
+            position:relative;
+            top: 13px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .header .menu-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #9c9a2f;
+            color: #333;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #ffff;
+            font-size: 16px;
+        }
+
+        .dropdown a:hover {
+            background-color: #d1a036;
+            color: #000;
+        }
+
+        .container {
+            max-width: 500px;
+            background-color: #FFD54F;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #8D4C1C;
+            margin-bottom: 20px;
+        }
+        .item {
+            background-color: #FFF8E1;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .item img {
+            width: 80px;
+            height: auto;
+            border-radius: 4px;
+        }
+        .item-details {
+            flex: 1;
+            margin-left: 15px;
+        }
+        .item-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #5D4037;
+        }
+        .item-desc {
+            font-size: 14px;
+            color: #5D4037;
+            margin: 5px 0;
+        }
+        .item-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #D32F2F;
+            text-align: right;
+            flex: 1;
+        }
+        .total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #5D4037;
+        }
+        .checkout-btn {
+            background-color: #8D4C1C;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .checkout-btn:hover {
+            background-color: #6D3B16;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #d1a036;
+            padding: 10px 0;
+            cursor: pointer;
+            color:  #000;
+        }
+
+        .footer .nav-item {
+            text-align: center;
+            color: #000;
+        }
+        .footer a {
+            color: #000;
+        }
+
+        .footer .nav-item i {
+            font-size: 24px;
+            display: block;
+        }
+
+        .footer .nav-item span {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .item img {
+                width: 100px;
+            }
+            .item-details, .item-price {
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <img src="logo.jpg" alt="">
+        <h1>STONER REALITY</h1>
+        <div class="menu-icon" onclick="toggleDropdown()">&#9776;</div>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="#">Home</a>
+            <a href="#">Katalog</a>
+            <a href="#">Tentang Kami</a>
+            <a href="#">Pusat Bantuan</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title">Pesanan Saya</div>
+
+        <div class="item">
+            <img src="images.jpg" alt="Excavator">
+            <div class="item-details">
+                <div class="item-title">EXCAVATOR</div>
+                <div class="item-desc">SANY SY75 - PC75</div>
+            </div>
+            <div class="item-price">Rp365.000.000</div>
+        </div>
+
+        <div class="item">
+            <img src="1.png" alt="Bulldozer">
+            <div class="item-details">
+                <div class="item-title">BULLDOZER</div>
+                <div class="item-desc">KOMATSU D21 BUILTUP</div>
+            </div>
+            <div class="item-price">Rp395.000.000</div>
+        </div>
+
+        <div class="item">
+            <img src="2.png" alt="Roller">
+            <div class="item-details">
+                <div class="item-title">ROLLER</div>
+                <div class="item-desc">SAKAI MODEL SW800 - KAPASITAS 8 TON</div>
+            </div>
+            <div class="item-price">Rp775.000.000</div>
+        </div>
+
+        <div class="item">
+            <img src="3.png" alt="Forklift">
+            <div class="item-details">
+                <div class="item-title">EXCAVATOR</div>
+                <div class="item-desc">COBELCO 7 TON</div>
+            </div>
+            <div class="item-price">Rp500.000.000</div>
+        </div>
+        <div class="item">
+            <img src="4.png" alt="Forklift">
+            <div class="item-details">
+                <div class="item-title">BULLDOZER</div>
+                <div class="item-desc">GENIE 1 TON</div>
+            </div>
+            <div class="item-price">Rp300.000.000</div>
+        </div>
+        <div class="item">
+            <img src="5.png" alt="Forklift">
+            <div class="item-details">
+                <div class="item-title">FORT</div>
+                <div class="item-desc">HAKAI 2 TON</div>
+            </div>
+            <div class="item-price">Rp65.000.000</div>
+        </div>
+        <div class="item">
+            <img src="6.png" alt="Forklift">
+            <div class="item-details">
+                <div class="item-title">LORER</div>
+                <div class="item-desc">CATERPILLAR 10 TON</div>
+            </div>
+            <div class="item-price">Rp345.000.000</div>
+        </div>
+
+        <div class="total">
+            <div>Total Belanja</div>
+            <div>Rp1.700.000.000</div>
+        </div>
+
+        <button class="checkout-btn">Checkout (0)</button>
+
+    </div>
+    <div class="footer">
+        <div class="nav-item">
+            <a href="Dashboard.html"><i>&#8962;</i></a>
+            <span>Beranda</span>
+        </div>
+        <div class="nav-item">
+            <i>&#128172;</i>
+            <span>Chat</span>
+        </div>
+        <div class="nav-item">
+            <i>&#128722;</i>
+            <span>Pesanan</span>
+        </div>
+        <div class="nav-item">
+            <i>&#128276;</i>
+            <span>Notifikasi</span>
+        </div>
+        <div class="nav-item">
+            <i>&#128100;</i>
+            <span>Akun</span>
+        </div>
+    </div>
+    <script>
+        function toggleDropdown() {
+            const dropdownMenu = document.getElementById("dropdownMenu");
+            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+        }
+
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.menu-icon')) {
+                const dropdownMenu = document.getElementById("dropdownMenu");
+                if (dropdownMenu.style.display === "block") {
+                    dropdownMenu.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
