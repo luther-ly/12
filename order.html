@@ -20,94 +20,6 @@
             min-height: 100vh;
             color: #fff;
         }
-        .header {
-            background-color: #d1a036;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            margin-bottom: 40px;
-        }
-        .header img {
-            width: 50px;
-            border-radius: 50%;
-            float: left;
-        }
-
-        .header h1 {
-            float: left;
-            position:relative;
-            top: 13px;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .header .menu-icon {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 24px;
-            color: #fff;
-            cursor: pointer;
-        }
-        .search-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            max-width: 500px;
-            margin: 0 auto;
-            position: fixed;
-            z-index: 1000;
-            width: auto;
-            height: 100vh;
-            bottom: 275px;
-            left: 800px;
-            
-        }
-
-        .search-box input[type="text"] {
-            width: 40%;
-            height: 30px;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            position: fixed;
-            z-index: 1000;
-
-        }
-
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 60px;
-            right: 20px;
-            background-color: #9c9a2f;
-            color: #333;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .dropdown a {
-            display: block;
-            padding: 10px 20px;
-            text-decoration: none;
-            color: #ffff;
-            font-size: 16px;
-        }
-
-        .dropdown a:hover {
-            background-color: #d1a036;
-            color: #000;
-        }
-
-
         .container {
             background-color: #FFD54F;
             padding: 20px;
@@ -267,19 +179,6 @@
     </style>
 </head>
 <body>
-    
-    
-    <div class="header">
-        <img src="logo.jpg" alt="">
-        <h1>STONER REALITY</h1>
-        <div class="menu-icon" onclick="toggleDropdown()">&#9776;</div>
-        <div class="dropdown" id="dropdownMenu">
-            <a href="index.html">Home</a>
-            <a href="katalog.html">Katalog</a>
-            <a href="AbaoutUs.html">Tentang Kami</a>
-            <a href="PusatBantuan.html">Pusat Bantuan</a>
-        </div>
-    </div>
     <div class="main">
         <div class="search-box">
             <input type="text" placeholder="Cari Alat">
@@ -381,21 +280,5 @@
             <span>Akun</span>
         </div>
     </div>
-    <script>
-        function toggleDropdown() {
-            const dropdownMenu = document.getElementById("dropdownMenu");
-            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-        }
-
-
-        window.onclick = function(event) {
-            if (!event.target.matches('.menu-icon')) {
-                const dropdownMenu = document.getElementById("dropdownMenu");
-                if (dropdownMenu.style.display === "block") {
-                    dropdownMenu.style.display = "none";
-                }
-            }
-        }
-    </script>
 </body>
 </html>
