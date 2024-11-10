@@ -52,7 +52,33 @@
             color: #fff;
             cursor: pointer;
         }
+        .search-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+            position: fixed;
+            z-index: 1000;
+            width: auto;
+            height: 100vh;
+            bottom: 275px;
+            left: 800px;
+            
+        }
 
+        .search-box input[type="text"] {
+            width: 40%;
+            height: 30px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            position: fixed;
+            z-index: 1000;
+
+        }
 
         .dropdown {
             display: none;
@@ -82,15 +108,16 @@
 
 
         .container {
-            max-width: 500px;
             background-color: #FFD54F;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             position: fixed;
+            height: 200vh;
             width: 100%;
             overflow-y: scroll;
-            margin-bottom: 190px; 
+            margin-bottom: 80px;
+            margin-top: 80px; 
             }
         .title {
             font-size: 24px;
@@ -218,6 +245,22 @@
                 text-align: center;
                 margin: 10px 0;
             }
+            .menu-icon {
+                position: relative;
+                transform: translateY(-15px);
+
+            }
+            .search-box input[type="text"] {
+                font-size: 10px;
+                width: 170px;
+                height: 20px;
+                z-index: 1000;
+                right: 60px;
+                transform: translateY(-115px);
+                left: 150px;
+
+            }
+
         }
 
     </style>
@@ -236,6 +279,12 @@
             <a href="PusatBantuan.html">Pusat Bantuan</a>
         </div>
     </div>
+    <div class="main">
+        <div class="search-box">
+            <input type="text" placeholder="Cari Alat">
+        </div>
+    </div>
+
 
     <div class="container">
         <div class="title">Pesanan Saya</div>
