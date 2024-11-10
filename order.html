@@ -23,7 +23,10 @@
             background-color: #d1a036;
             padding: 20px;
             text-align: center;
-            position: relative;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
         }
         .header img {
             width: 50px;
@@ -157,6 +160,10 @@
             padding: 10px 0;
             cursor: pointer;
             color:  #000;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            bottom: 0;
         }
 
         .footer .nav-item {
@@ -296,7 +303,7 @@
             <span>Chat</span>
         </div>
         <div class="nav-item">
-             <i>&#128722;</i> 
+            <i>&#128722;</i> 
             <span>Pesanan</span>
         </div>
         <div class="nav-item">
