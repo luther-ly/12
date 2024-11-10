@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rating Bintang</title>
+  <style>
+    * {
+        text-decoration: none;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+      text-decoration: none;
+    }
+    .rating-container {
+      text-align: center;
+    }
+    .stars {
+      font-size: 40px;
+      cursor: pointer;
+      color: #ddd;
+    }
+    .stars .star:hover,
+    .stars .star.selected {
+      color: #ffcc00;
+    }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #d1a036;
+            padding: 5px 0;
+            cursor: pointer;
+            color:  #000;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            bottom: 0;
+        }
+
+        .footer .nav-item {
+            text-align: center;
+            color: #000;
+            padding: 5px;
+        }
+        .footer a {
+            color: #000;
+        }
+
+        .footer .nav-item i {
+            font-size: 24px;
+            display: block;
+        }
+
+        .footer .nav-item span {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .nav-item:hover {
+            background-color: #6D3B16;
+        }
+        button {
+            background-color: blue;
+            box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 1);
+            color: white;
+            padding: 5px;
+        }
+        button:hover{
+            background-color: rgb(13, 108, 231);
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        @media(min-width: 700px){
+
+        }
+  </style>
+</head>
+<body>
+
+  <div class="rating-container">
+    <h2>Beri Rating Anda</h2>
+    <div class="stars" id="starContainer">
+      <span class="star" onclick="rate(1)">★</span>
+      <span class="star" onclick="rate(2)">★</span>
+      <span class="star" onclick="rate(3)">★</span>
+      <span class="star" onclick="rate(4)">★</span>
+      <span class="star" onclick="rate(5)">★</span>
+    </div>
+    <p id="ratingText"></p>
+    <button type="submit">Kirim</button>
+  </div>
+  <div class="footer">
+    <div class="nav-item">
+        <a href="index.html"><i>&#8962;</i></a>
+        <span>Beranda</span>
+    </div>
+    <div class="nav-item">
+        <a href="https://wa.me/6285262645595"><i>&#128172;</i></a>
+        <span>Chat</span>
+    </div>
+    <div class="nav-item">
+        <a href="order.html"><i>&#128722;</i></a>
+        <span>Pesanan</span>
+    </div>
+    <div class="nav-item">
+        <a href="notif.html"><i>&#128276;</i></a>
+        <span>Notifikasi</span>
+    </div>
+    <div class="nav-item">
+        <a href="akun.html"><i>&#128100;</i></a>
+        
+        <span>Akun</span>
+    </div>
+</div>
+
+  <script>
+    function rate(star) {
+      const stars = document.querySelectorAll(".star");
+      stars.forEach((element, index) => {
+        if (index < star) {
+          element.classList.add("selected"); 
+        } else {
+          element.classList.remove("selected"); }
+      });
+      
+      document.getElementById("ratingText").innerText = `Terimakasih Telah Memberikan ${star} Bintang di Tugas Kelompok Kami😉`;
+    }
+  </script>
+
+</body>
+</html>
