@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thalassemia Care Movement</title>
+    <title>Pusat Informasi Kesehatan</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,45 +13,54 @@
             color: #333;
         }
         header {
-            background-color: #2a9d8f;
+            background-color: #4caf50;
             color: white;
-            padding: 15px 20px;
+            padding: 20px;
             text-align: center;
         }
         nav {
             display: flex;
             justify-content: space-around;
-            background-color: #264653;
-            padding: 10px;
+            background-color: #333;
+            padding: 10px 0;
         }
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             padding: 10px 15px;
             border-radius: 5px;
         }
         nav a:hover {
-            background-color: #2a9d8f;
+            background-color: #4caf50;
         }
         .container {
             padding: 20px;
         }
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        .card h3 {
+            color: #4caf50;
+        }
         .feature-button {
             display: inline-block;
-            background-color: #e76f51;
+            background-color: #4caf50;
             color: white;
-            text-align: center;
-            padding: 10px 20px;
-            margin: 10px;
+            padding: 10px 15px;
+            margin-top: 10px;
             text-decoration: none;
             border-radius: 5px;
         }
         .feature-button:hover {
-            background-color: #f4a261;
+            background-color: #45a049;
         }
         footer {
-            background-color: #264653;
+            background-color: #333;
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -63,53 +72,51 @@
 </head>
 <body>
     <header>
-        <h1>Thalassemia Care Movement</h1>
-        <p>Edukasi | Donor Darah | Solidaritas</p>
+        <h1>Pusat Informasi Kesehatan</h1>
+        <p>Edukatif, Informatif, dan Interaktif</p>
     </header>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#education">Edukasi</a>
-        <a href="#calendar">Kalender Donor</a>
-        <a href="#donors">Direktori Pendonor</a>
-        <a href="#discussion">Diskusi</a>
+        <a href="#diseases">Penyakit Berbahaya</a>
+        <a href="#prevention">Pencegahan</a>
+        <a href="#education">Edukasi Kesehatan</a>
+        <a href="#support">Dukungan Komunitas</a>
     </nav>
 
     <div class="container">
-        <section id="home">
-            <h2>Selamat Datang di Thalassemia Care Movement</h2>
-            <p>Platform digital untuk edukasi, kolaborasi, dan aksi nyata membantu penderita Thalassemia.</p>
-            <a href="#education" class="feature-button">Pelajari Thalassemia</a>
-            <a href="#calendar" class="feature-button">Jadwal Donor</a>
-        </section>
-
-        <section id="education">
-            <h2>Edukasi Thalassemia</h2>
-            <p>Dapatkan informasi lengkap tentang Thalassemia: gejala, pengobatan, dan pencegahan.</p>
+        <section id="diseases" class="card">
+            <h3>Macam-macam Penyakit Berbahaya</h3>
+            <ul>
+                <li><strong>Thalassemia</strong>: Penyakit genetik yang memengaruhi produksi hemoglobin.</li>
+                <li><strong>Diabetes</strong>: Gangguan metabolisme gula darah.</li>
+                <li><strong>Hipertensi</strong>: Penyakit tekanan darah tinggi.</li>
+                <li><strong>Kanker</strong>: Pertumbuhan sel abnormal yang merusak tubuh.</li>
+                <li><strong>Penyakit Jantung</strong>: Gangguan pada fungsi dan struktur jantung.</li>
+            </ul>
             <a href="#" class="feature-button">Baca Selengkapnya</a>
         </section>
 
-        <section id="calendar">
-            <h2>Kalender Donor Darah</h2>
-            <p>Ikut berkontribusi dalam aksi donor darah untuk membantu penderita Thalassemia.</p>
-            <a href="#" class="feature-button">Lihat Jadwal</a>
+        <section id="prevention" class="card">
+            <h3>Pencegahan Penyakit</h3>
+            <p>Dapatkan panduan untuk mencegah berbagai penyakit melalui gaya hidup sehat dan pemeriksaan dini.</p>
+            <a href="#" class="feature-button">Lihat Tips Pencegahan</a>
         </section>
 
-        <section id="donors">
-            <h2>Direktori Pendonor</h2>
-            <p>Temukan pendonor darah terdekat yang siap membantu.</p>
-            <a href="#" class="feature-button">Cari Pendonor</a>
+        <section id="education" class="card">
+            <h3>Edukasi Kesehatan</h3>
+            <p>Pahami lebih dalam tentang kesehatan Anda dengan artikel dan video edukasi dari para ahli.</p>
+            <a href="#" class="feature-button">Mulai Belajar</a>
         </section>
 
-        <section id="discussion">
-            <h2>Ruang Diskusi</h2>
-            <p>Bagikan pengalaman dan dukungan Anda di komunitas kami.</p>
-            <a href="#" class="feature-button">Mulai Diskusi</a>
+        <section id="support" class="card">
+            <h3>Dukungan Komunitas</h3>
+            <p>Bergabung dengan komunitas yang peduli dan saling mendukung untuk mengatasi berbagai tantangan kesehatan.</p>
+            <a href="#" class="feature-button">Gabung Komunitas</a>
         </section>
     </div>
 
     <footer>
-        <p>© 2024 Thalassemia Care Movement. All Rights Reserved.</p>
+        <p>© 2024 Pusat Informasi Kesehatan. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
