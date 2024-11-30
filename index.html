@@ -3,255 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Thalassemia Care Movement</title>
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        body {
-            background-image: url('images.jpg');
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            color: #fff;
-        }
-        .header {
-            background-color: #d1a036;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            z-index: 1;
-            top: 0;
-
-        }
-        .header img {
-            width: 50px;
-            border-radius: 50%;
-            float: left;
-        }
-
-        .header h1 {
-            float: left;
-            position:relative;
-            top: 13px;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .header .menu-icon {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 24px;
-            color: #fff;
-            cursor: pointer;
-        }
-
-
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 60px;
-            right: 20px;
-            background-color: #9c9a2f;
+            background-color: #f4f4f9;
             color: #333;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            z-index: 1;
         }
-
-        .dropdown a {
-            display: block;
-            padding: 10px 20px;
-            text-decoration: none;
-            color: #ffff;
-            font-size: 16px;
-        }
-
-        .dropdown a:hover {
-            background-color: #d1a036;
-            color: #000;
-        }
-
-
-        .main {
-            flex: 1;
-            padding: 20px;
+        header {
+            background-color: #2a9d8f;
+            color: white;
+            padding: 15px 20px;
             text-align: center;
         }
-
-        .main h2 {
-            font-size: 50px;
-            font-weight: bold;
-            color: #ffff;
-            position: relative;
-            top: 100px;
-            margin-bottom: 20px;
-        }
-
-        .search-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            max-width: 500px;
-            margin: 0 auto;
-            position: relative;
-            top: 100px;
-        }
-
-        .search-box input[type="text"] {
-            width: 70%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            position: fixed;
-            z-index: 1000;
-
-        }
-
-        .footer {
+        nav {
             display: flex;
             justify-content: space-around;
-            align-items: center;
-            background-color: #d1a036;
-            padding: 5px 0;
-            cursor: pointer;
-            color:  #000;
-            position: fixed;
-            width: 100%;
-            z-index: 100;
-            bottom: 0;
+            background-color: #264653;
+            padding: 10px;
         }
-
-        .footer .nav-item {
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #2a9d8f;
+        }
+        .container {
+            padding: 20px;
+        }
+        .feature-button {
+            display: inline-block;
+            background-color: #e76f51;
+            color: white;
             text-align: center;
-            color: #000;
-            padding: 5px;
+            padding: 10px 20px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 5px;
         }
-        .footer a {
-            color: #000;
+        .feature-button:hover {
+            background-color: #f4a261;
         }
-
-        .footer .nav-item i {
-            font-size: 24px;
-            display: block;
-        }
-
-        .footer .nav-item span {
-            font-size: 12px;
-            margin-top: 5px;
-        }
-        .nav-item:hover {
-            background-color: #6D3B16;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 7px;
-                margin-top: -6px;
-                margin-left: 2px;
-                position: relative;
-            }
-            .menu-icon {
-                position: relative;
-                transform: translateY(-9px);
-
-            }
-
-            .search-box input[type="text"] {
-                font-size: 10px;
-                width: 170px;
-                height: 20px;
-                z-index: 1000;
-                right: 60px;
-                transform: translateY(-160px);
-
-            }
-            .main h2 {
-                font-size: 20px;
-                position: relative;
-                bottom: 100px;
-            }
-
-            .footer .nav-item span {
-                font-size: 10px;
-            }
-            .header img {
-                width: 20px;
-                margin-left: -12px;
-            }
+        footer {
+            background-color: #264653;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Thalassemia Care Movement</h1>
+        <p>Edukasi | Donor Darah | Solidaritas</p>
+    </header>
 
-    <div class="header">
-        <img src="logo.jpg" alt="">
-        <h1>STONER REALITY</h1>
-        <div class="menu-icon" onclick="toggleDropdown()">&#9776;</div>
-        <div class="dropdown" id="dropdownMenu">
-            <a href="index.html">Home</a>
-            <a href="katalog.html">Katalog</a>
-            <a href="AbaoutUs.html">Tentang Kami</a>
-            <a href="PusatBantuan.html">Pusat Bantuan</a>
-            <a href="panduan.html">Panduan</a>
-        </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#education">Edukasi</a>
+        <a href="#calendar">Kalender Donor</a>
+        <a href="#donors">Direktori Pendonor</a>
+        <a href="#discussion">Diskusi</a>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>Selamat Datang di Thalassemia Care Movement</h2>
+            <p>Platform digital untuk edukasi, kolaborasi, dan aksi nyata membantu penderita Thalassemia.</p>
+            <a href="#education" class="feature-button">Pelajari Thalassemia</a>
+            <a href="#calendar" class="feature-button">Jadwal Donor</a>
+        </section>
+
+        <section id="education">
+            <h2>Edukasi Thalassemia</h2>
+            <p>Dapatkan informasi lengkap tentang Thalassemia: gejala, pengobatan, dan pencegahan.</p>
+            <a href="#" class="feature-button">Baca Selengkapnya</a>
+        </section>
+
+        <section id="calendar">
+            <h2>Kalender Donor Darah</h2>
+            <p>Ikut berkontribusi dalam aksi donor darah untuk membantu penderita Thalassemia.</p>
+            <a href="#" class="feature-button">Lihat Jadwal</a>
+        </section>
+
+        <section id="donors">
+            <h2>Direktori Pendonor</h2>
+            <p>Temukan pendonor darah terdekat yang siap membantu.</p>
+            <a href="#" class="feature-button">Cari Pendonor</a>
+        </section>
+
+        <section id="discussion">
+            <h2>Ruang Diskusi</h2>
+            <p>Bagikan pengalaman dan dukungan Anda di komunitas kami.</p>
+            <a href="#" class="feature-button">Mulai Diskusi</a>
+        </section>
     </div>
 
-    <div class="main">
-        <h2>RENTAL ALAT BERAT <br> LENGKAP DAN BERKUALITAS</h2>
-        <div class="search-box">
-            <input type="text" placeholder="Cari Alat">
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="nav-item">
-            <a href="index.html"><i>&#8962;</i></a>
-            <span>Beranda</span>
-        </div>
-        <div class="nav-item">
-            <a href="https://wa.me/6285262645595"><i>&#128172;</i></a>
-            <span>Chat</span>
-        </div>
-        <div class="nav-item">
-            <a href="order.html"><i>&#128722;</i></a>
-            <span>Pesanan</span>
-        </div>
-        <div class="nav-item">
-            <a href="notif.html"><i>&#128276;</i></a>
-            <span>Notifikasi</span>
-        </div>
-        <div class="nav-item">
-            <a href="akun.html"><i>&#128100;</i></a>
-            
-            <span>Akun</span>
-        </div>
-    </div>
-    <script>
-        function toggleDropdown() {
-            const dropdownMenu = document.getElementById("dropdownMenu");
-            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-        }
-
-
-        window.onclick = function(event) {
-            if (!event.target.matches('.menu-icon')) {
-                const dropdownMenu = document.getElementById("dropdownMenu");
-                if (dropdownMenu.style.display === "block") {
-                    dropdownMenu.style.display = "none";
-                }
-            }
-        }
-    </script>
+    <footer>
+        <p>© 2024 Thalassemia Care Movement. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
